@@ -1,0 +1,221 @@
+<!--
+ * @陕西唐远
+ * @文件名: cbjc_List.html
+ * @作者: 李浩源
+ * @Git: e
+ * @Date: 2019-10-07 15:22:09
+ * @描述: 出版教材列表页html
+ * @版本: 1.00
+ * @修改历史纪录: （版本 修改时间 修改人 修改内容）
+ * @例: 
+ -->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>登陆科研管理系统</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <link rel="stylesheet" href="./layuiadmin/layui/css/layui.css" media="all">
+    <link rel="stylesheet" href="./layuiadmin/style/admin.css" media="all">
+    <link rel="stylesheet" href="./layuiadmin/style/login.css" media="all">
+</head>
+<style>
+    html,
+    body {
+        height: 100%;
+    }
+
+    body {
+        margin: 0;
+        width: 100%;
+        background-color: #2e4b87;
+        background: url("./images/bg_login.png") no-repeat;
+        background-size: cover;
+    }
+
+    #LAY-user-login {
+        height: 100%;
+        background: url("./images/科研管理系统/login.png") no-repeat;
+        background-position: 50% 67%;
+    }
+
+    .layadmin-user-login-top {
+        width: 100%;
+        height: 124px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 11%;
+    }
+
+    .layadmin-user-login-topbox {
+        width: 750px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .layadmin-user-login-name {
+        display: flex;
+        align-items: center;
+    }
+
+    .layadmin-user-login-main {
+        width: 256px;
+        position: absolute;
+        left: 58%;
+        top: 45%;
+    }
+
+    .layadmin-user-login-header {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 27px;
+    }
+
+    .layadmin-username-login {
+        height: 45px;
+        display: flex;
+        align-items: center;
+        border-bottom: 1px solid #a9b9da;
+    }
+
+    .layadmin-username-login input {
+        border: none;
+    }
+
+    .layui-input,
+    .layui-textarea {
+        height: 43px;
+        border: none;
+        font-size: 14px;
+        color: #95a5bc;
+        padding-left: 20px;
+        background-color: rgba(255, 255, 255, 0) !important;
+        font-family: "微软雅黑";
+    }
+
+    .layui-form-item {
+        margin-bottom: 15px;
+    }
+
+    h1 {
+        font-size: 36px;
+        color: #ffffff;
+        font-weight: 700;
+        /* background: url(./images/bgxt.png) no-repeat; */
+    }
+
+    .layui-form-item2 {
+        margin-bottom: 45px;
+    }
+
+    .layui-form-item3 {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    #denglu {
+        width: 220px;
+        height: 44px;
+        position: relative;
+        overflow: hidden;
+        background: url("./images/科研管理系统/loginbtn.png") no-repeat;
+        background-position: top center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .loginFooter {
+        width: 100%;
+        height: 90px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        left: 0px;
+        bottom: 0px;
+    }
+
+    .loginFooterSpanl {
+        color: #ffffff;
+    }
+
+    .loginFooterSpanr {
+        color: #ffffff;
+        margin-left: 150px;
+    }
+</style>
+<body>
+    <div class="layadmin-user-login layadmin-user-display-show" id="LAY-user-login">
+        <div class="layadmin-user-login-top">
+            <div class="layadmin-user-login-topbox">
+                <img src="./images/科研管理系统/l-line.png" alt="">
+                <div class="layadmin-user-login-name">
+
+                    <h1>
+                        <img src="./images/科研管理系统/科研信息管理系统.png" alt="">
+                    </h1>
+                </div>
+                <img src="./images/科研管理系统/r-line.png" alt="">
+            </div>
+        </div>
+        <div class="layadmin-user-login-main">
+            <div class="layadmin-user-login-box layadmin-user-login-header">
+                <img src="./images/科研管理系统/用户登录.png" alt="">
+            </div>
+            <div class="layadmin-user-login-box layadmin-user-login-body layui-form">
+                <div class="layui-form-item">
+                    <label class="layadmin-user-login-icon layui-icon layui-icon-username"
+                        for="LAY-user-login-username">
+                    </label>
+                    <div class="layadmin-username-login">
+                        <img src="./images/科研管理系统/user.png" alt="">
+                        <input type="text" 
+                        name="XDLMmLoginName" id="UserName" autocomplete="off" lay-verify="required"
+                            placeholder="请输入用户名" class="layui-input">
+                    </div>
+
+                </div>
+                <div class="layui-form-item2">
+                    <label class="layadmin-user-login-icon layui-icon layui-icon-password"
+                        for="LAY-user-login-password"></label>
+                    <div class="layadmin-username-login">
+                        <img src="./images/科研管理系统/密码.png" alt="">
+                   
+                        <input type="password" name="XDLMPassword" id="Password" autocomplete="off"
+                            lay-verify="required" placeholder="请输入密码" class="layui-input">
+                    </div>
+                </div>
+
+                <div class="layui-form-item3">
+                    <button class="layui-btn layui-btn-fluid" id="denglu" lay-submit="login"
+                        lay-filter="LAY-user-login-submit">
+                        <img src="./images/loginbtn.png" alt="">
+
+                    </button>
+                    <!-- <button class="layui-btn layui-btn-fluid" id="login_btn_yhm" lay-submit="login" lay-filter="LAY-user-login-submit">
+							<img src="./images/loginbtn.png" alt="">
+                    </button> -->
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <div class="loginFooter">
+        <span class="loginFooterSpanl">版权所有：陕西十月文物保护有限公司</span>
+        <span class="loginFooterSpanr">技术支持：陕西十月文物保护有限公司</span>
+    </div>
+</body>
+</html>
+<script src="./layuiadmin/layui/layui.js"></script>
+<script src="./js/SY_kyxt_common.js"></script>
+<script src="./js/login.js"></script>
